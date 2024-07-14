@@ -4,15 +4,48 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Camera FPCamera;
+    [SerializeField] float range = 100f;
+    [SerializeField] float damage = 30f;
+    [SerializeField] ParticleSystem muzzleFlash;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        PlayMuzzleFlash();
+        ProcessRaycast();
+    }
+
+    private void PlayMuzzleFlash()
+    {
+        muzzleFlash.Play();
+    }
+
+    private void ProcessRaycast()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        {
+            Debug.Log("I hit this thing: " + hit.transform.name);
+            //TODO: add a hit effect for visual feedback
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+            if(target == null)
+            {
+                return;
+            }
+            target.TakeDamage(damage);
+        }
+        else
+        {
+            return;
+        }
     }
 }
