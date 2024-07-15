@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 4459864850019384737}
   - component: {fileID: 4459864850019384741}
   - component: {fileID: 4459864850019384740}
+  - component: {fileID: 4842540025917965029}
   m_Layer: 0
   m_Name: FPScontroller
   m_TagString: Player
@@ -225,6 +226,19 @@ MonoBehaviour:
   joint: {fileID: 4459864851508666808}
   bobSpeed: 5
   bobAmount: {x: 0, y: 0.1, z: 0}
+--- !u!114 &4842540025917965029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864850019384750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2541772eb9e94b49b13b474d6473921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!1 &4459864850190357393
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +876,7 @@ MonoBehaviour:
   range: 100
   damage: 30
   muzzleFlash: {fileID: 5372264787490517104}
+  hitEffect: {fileID: 0}
 --- !u!1001 &5372264787471773620
 PrefabInstance:
   m_ObjectHideFlags: 0
