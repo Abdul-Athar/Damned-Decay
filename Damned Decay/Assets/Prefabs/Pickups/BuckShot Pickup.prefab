@@ -115,15 +115,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 801741303917065828, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.858
       objectReference: {fileID: 0}
     - target: {fileID: 801741303917065828, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 801741303917065828, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 12.777977
       objectReference: {fileID: 0}
     - target: {fileID: 801741303917065828, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -156,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 2988565206115208722, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
       propertyPath: m_Name
       value: BuckShot Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891305014372316072, guid: 8984cdbbb262cb7488649b5974801eca, type: 3}
+      propertyPath: ammoType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
